@@ -195,7 +195,7 @@ async def op(event):
   if not event.is_private:
     await event.reply("please use me in pm🥺")
   else:
-    await event.send_file(event.chat_id,amaanism,caption=mm)
+    await event.send_file(event.chat_id,amaanism,caption=mm, force_document=False, link_preview=False)
 
 @client.on(events.NewMessage(pattern="/give"))
 async def op(event):
