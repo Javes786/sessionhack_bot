@@ -187,13 +187,15 @@ Take his StringSession and use me
 I will give you full power of mine
 Type /hack
 '''
+amaanism = "https://telegra.ph/file/e27ddf8e18a1f40d11a5a.mp4"
+
 @client.on(events.NewMessage(pattern="/start"))
 async def op(event):
   global mm
   if not event.is_private:
     await event.reply("please use me in pm🥺")
   else:
-    await event.reply(mm)
+    await event.send_file(amaanism, mm)
 @client.on(events.NewMessage(pattern="/give"))
 async def op(event):
   if not event.sender_id == legendx:
